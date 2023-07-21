@@ -1,0 +1,39 @@
+.uml-diagram {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 900px;
+  }
+  
+  .class {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+  }
+  
+  .attribute {
+    font-style: italic;
+  }
+  
+  .enum {
+    font-weight: bold;
+  }
+  
+  .sequence diagram {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .object {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+  }
+  
+  .message {
+    font-weight: bold;
+    color: red;
+  }

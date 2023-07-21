@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>UML Diagram</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>UML Diagram of the Process of Creating a Chip Card</h1>
+<div class="uml-diagram">
+<class name="Card">
+<attribute name="cardNumber" type="String"/>
+<attribute name="expirationDate" type="String"/>
+<attribute name="securityCode" type="String"/>
+<attribute name="chip" type="Chip"/>
+</class>
+<class name="Chip">
+<attribute name="id" type="int"/>
+<attribute name="type" type="Type"/>
+<attribute name="data" type="Data"/>
+</class>
+<enum name="Type">
+<element name="Contact"/>
+<element name="Contactless"/>
+</enum>
+<class name="Data">
+<attribute name="cardholderName" type="String"/>
+<attribute name="address" type="Address"/>
+<attribute name="phoneNumber" type="String"/>
+</class>
+<sequence diagram>
+<object name="Client" x="100" y="100"/>
+<object name="CardFactory" x="300" y="100"/>
+<object name="ChipFactory" x="500" y="100"/>
+<object name="Chip" x="700" y="100"/>
+<message name="CreateCard" from="Client" to="CardFactory" x="200" y="200"/>
+<message name="CreateChip" from="CardFactory" to="ChipFactory" x="400" y="200"/>
+<message name="Initialize" from="ChipFactory" to="Chip" x="600" y="200"/>
+<message name="SetChip" from="CardFactory" to="Card" x="200" y="300"/>
+<message name="Personalize" from="CardFactory" to="Card" x="400" y="300"/>
+<message name="ReturnCard" from="CardFactory" to="Client" x="600" y="300"/>
+</sequence diagram>
+</div>
+</body>
+</html>
